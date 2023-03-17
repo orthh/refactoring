@@ -1,0 +1,19 @@
+[
+  {
+    "customer": "BigCo",
+    "performances": [
+      {
+        "playID": "hamlet",
+        "audiences": 55
+      },
+      {
+        "playID": "as-like",
+        "audiences": 55
+      },
+      {
+        "playID": "othello",
+        "audiences": 55
+      }
+    ]
+  }
+]
