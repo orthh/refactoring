@@ -129,6 +129,10 @@ function amountFor2(aPerformance, play) {
   return result;
 }
 
+function playFor(aPerformance) {
+  return plays[aPerformance.playID];
+}
+
 function statement3(invoice, plays) {
   let totalAmount = 0;
   let volumeCredits = 0;
@@ -140,7 +144,7 @@ function statement3(invoice, plays) {
   }).format;
 
   for (let perf of invoice.performances) {
-    const play = plays[perf.playID];
+    const play = playFor(perf); //우변을 함수로 추출
     let thisAmount = amountFor2(perf, play);
     //포인트를 적립한다.
     volumeCredits += Math.max(perf.audiences - 30, 0);
